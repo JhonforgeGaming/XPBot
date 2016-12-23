@@ -37,10 +37,10 @@ bot.on("message", msg => {
 	
 	
 	
-	console.log("Slime")
-	if (msg.content.startsWith(prefix + "killSlime")) {
+	console.log("Example")
+	if (msg.content.startsWith(prefix + "killExample")) {
 		userData.XP += 10
-		msg.channel.sendMessage(`${msg.author} has killed a Slime!`)
+		msg.channel.sendMessage(`${msg.author} has killed an Example!`)
 	}
 	
 	console.log(XP)
