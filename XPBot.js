@@ -9,7 +9,7 @@ bot.on("message", msg => {
 	console.log(0)
 	if(!msg.content.startsWith(prefix)) return;
 	
-	console.log(0.1)
+	//console.log(0.1)
 	//if(msg.author.id != "Your ID") return;
 	//Only use the above for testing as only the person with that ID can use the bot.
 	
@@ -21,10 +21,11 @@ bot.on("message", msg => {
 	let userData = XP[msg.author.id];
 	if (!userData) userData = {XP: 0, level: 0};
 	
+	let userXP = XP[msg.author.id] ? XP[msg.author.id].XP : 0;
 	let curLevel = Math.floor(0.1 * Math.sqrt(userXP));
 	if (curLevel > userData.level) {
 		userData.level = curLevel;
-		msg.reply('You have lvled ^ to lvl **${curLevel}**!');
+		msg.reply(`You have lvled ^ to lvl **${curLevel}**!`);
 	}
 	
 	console.log("level")
