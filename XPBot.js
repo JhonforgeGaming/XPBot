@@ -10,7 +10,8 @@ bot.on("message", msg => {
 	if(!msg.content.startsWith(prefix)) return;
 	
 	console.log(0.1)
-	if(msg.author.id != "235144525763444736") return;
+	//if(msg.author.id != "Your ID") return;
+	//Only use the above for testing as only the person with that ID can use the bot.
 	
 	console.log("help command")
 	if (msg.content.startsWith(prefix + "help")) {
